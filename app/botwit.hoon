@@ -57,7 +57,7 @@
       %noun
     =/  data  !<(bird vase)
     :_  this(arg (~(put by arg) q.flag.data data))
-    [%pass /timers/(scot %p p.flag.data)/[q.flag.data] %arvo %b %wait (add now.bowl ~m3)]~
+    [%pass /timers/(scot %p p.flag.data)/[q.flag.data] %arvo %b %wait (add now.bowl ~m30)]~
   ==
 ++  on-watch  on-watch:def
 ++  on-agent  on-agent:def
