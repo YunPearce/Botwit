@@ -1,0 +1,9 @@
+:~
+  title+'Botwit'
+  info+'Twitter chat bot'
+  color+0x71.d2e1
+  version+[0 0 1]
+  website+'https://github.com/SuperCoolYun/botwit'
+  license+'MIT'
+  site+/app/botwit
+==
