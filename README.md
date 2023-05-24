@@ -5,7 +5,7 @@ Twitter chatbot
 
 ```
 |install ~botter-midsum-salrux %gato
-|install %botwit
+|install ~mastyr-dozzod-marlur %botwit
 :gato &add ['configure' [%botwit %configure] !>(['API-key' 'API-secret' ~])]
 ```
 
