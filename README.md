@@ -1,5 +1,5 @@
 # Botwit
-Twitter chatbot
+Twitter chatbot for group chat
 
 ## Installing 
 
@@ -9,9 +9,11 @@ Twitter chatbot
 :gato &add ['configure' [%botwit %configure] !>(['API-key' 'API-secret' ~])]
 ```
 
+### API-key and API-secret are consumer keys, you can create them on twitter developer portal. Don't forget to grant in READ and WRITE permissions (in settings of your project).
+
 ## Commands 
 
-To authenticate run:
+To authenticate run commands below in grop chat:
 
 ````
 /configure
