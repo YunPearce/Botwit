@@ -9,7 +9,7 @@ Twitter chatbot for group chat
 :gato &add ['configure' [%botwit %configure] !>(['API-key' 'API-secret' ~])]
 ```
 
-### API-key and API-secret are consumer keys, you can create them on twitter developer portal. Don't forget to grant in READ and WRITE permissions (in settings of your project).
+### API-key and API-secret are consumer keys, you can create them on twitter developer portal. Don't forget to grant READ and WRITE permissions (in settings of your project).
 
 ## Commands 
 
