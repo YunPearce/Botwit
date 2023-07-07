@@ -1,5 +1,5 @@
 # Botwit
-Twitter chatbot for group chat
+Twitter bot for group chat
 
 ## Installing 
 
