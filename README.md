@@ -37,7 +37,7 @@ To revoke access to `/tweet`:
 /out ~mighex-forfem ~morzod-ballet ~rovnys-ricfer
 ```
 
-> Currently not suppported with free TwitterAPI tier:
+> Currently not supported with free TwitterAPI tier:
 
 To get information about user
 `/profile username`
