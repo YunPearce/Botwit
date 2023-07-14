@@ -35,14 +35,12 @@
 =/  req=request:http  (get-req (crip "https://api.twitter.com/oauth/access_token?oauth_verifier={(trip pin)}&oauth_token={(trip tkn.token)}") date eny :~(:-('oauth_consumer_key' key.token)) (weld (trip sec.token) "&") %'GET' %.n)
 ;<  ~  bind:m  (send-request:strandio req)
 ;<  rep=client-response:iris  bind:m  take-client-response:strandio
-~&  rep
 ?>  ?=(%finished -.rep)
 ?.  =(status-code.response-header.rep 200)
   (pure:m !>([err vase.bird]))
 =/  keys=(map @t @t)  (keys-to-map `@t`q.data.u.+3.full-file.rep) 
-~&  keys
-;<  tid=tid:spider   bind:m  (start-thread-with-args:strandio byk.bowl %add !>([~ keys sec.token key.token]))
-=/  msg   :~  [%bold p=:~('Authentication complete!')]
-            ==
+;<  tid=tid:spider   bind:m  (start-thread-with-args:strandio byk.bowl %add !>([~ keys sec.token key.token flag.bird]))
+=/  msg    :~  [%bold p=:~('Authentication complete!')]
+              ==
 =/  reply  [%story p=[p=~ q=msg]]
 (pure:m !>([reply vase.bird]))

@@ -34,8 +34,12 @@
 =/  m  (strand ,vase)
 ;<  date=@da  bind:m  get-time:strandio
 ;<  eny=@uvJ  bind:m  get-entropy:strandio
-=/  =bird  !<(bird arg)
-=/  token  !<([tkn=@t sec=tape key=@t] vase.bird)  
+=/  =bird     !<(bird arg) 
+=/  data      !<([keys=[tkn=@t sec=tape key=@t] auth=(list ship) chat=@tas] vase.bird)
+=/  token  keys.data
+|-  ^-  form:m
+?.  =(chat.data q.flag.bird)                      !!
+?~  (find :~(author.memo.bird) (homo auth.data))  !!
 =/  flag=[txt=tape time=@dr media=tape]  (parse-txt text.bird date)
 =/  twit=@t  (crip "\{\"text\": \"{txt.flag}\"}")
 ::  checking if time.flag present
@@ -53,7 +57,6 @@
 ::  ;<  rep-media=client-response:iris  bind:m  take-client-response:strandio
 ::  ?>  ?=(%finished -.rep-media)
 ::  =/  id=@ud  ((ot ~['media_id' ni]):dejs:format (need (de-json:html `@t`q.data.u.+3.full-file.rep-media))) ::check if id correct as num 
-::  ~&  id
 ::  ::get media id here
 ::  =/  media-twit  ", \"media\": \{\"media_ids\": [\"{(scow %ud id)}\"]}}"
 ::  $(flag  [txt.flag time.flag ""], twit (crip (weld (snip (trip twit)) media-twit)))
@@ -63,8 +66,8 @@
 ?>  ?=(%finished -.rep)
 =/  status-code=@ud  status-code.response-header.rep
 ?.  =(201 status-code)
-    ?:  =(401 status-code)  (pure:m !>(:~('Unathorized' 'try [%start ~] again')))
-    (pure:m !>(:~(`@t`status-code 'error')))
+    ?:  =(401 status-code)  (pure:m !>(['Unathorized, try /configure again' vase.bird]))
+    (pure:m !>([(crip "Error {(scow %ud status-code)}") vase.bird]))
 =/  id=@t   ((ot ~[data+(ot :~(['id' so]))]):dejs:format (need (de-json:html `@t`q.data.u.+3.full-file.rep)))
 =/  inline    :~  (crip "'{txt.flag}'")
                 ' has been posted'

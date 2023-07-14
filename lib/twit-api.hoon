@@ -304,4 +304,23 @@ $(l (weld l :~(-:(find-id m))), m +:(find-id m))
                            ==
                            end
 [%story p=[p=:~(block) q=lin]]
+::
+::  For ted/in.hoon ted/out.hoon
+::
+++  text-to-ships 
+|=  t=@t
+^-  (list ship)
+=/  text  (space-check t)
+=/  list-t  `(list @t)`(scan (trip text) (star (ifix [sig ace] sym)))
+=/  ships=(list ship)  
+    %+  turn  list-t
+    |=(a=@t `@p`(scan (trip a) fed:ag))
+ships
+::
+++  space-check 
+|=  t=@t
+=/  =tape  (trip t)
+?:  =((rear tape) ' ')  t
+(crip (weld tape " "))
+::
 --
