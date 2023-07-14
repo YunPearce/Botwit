@@ -25,16 +25,19 @@ To authenticate run commands below in grop chat:
 To post tweet at scheduled time :
 `/tweet my_tweet --time ~2000.1.1`
 
-To allow others use `/tweet` 
-`/in ~mighex-forfem`
-`/in ~mighex-forfem ~morzod-ballet ~rovnys-ricfer`
+To allow others use `/tweet` :
+```
+/in ~mighex-forfem
+/in ~mighex-forfem ~morzod-ballet ~rovnys-ricfer
+```
 
-To revoke access to `/tweet`
-`/out all`
-`/out ~mighex-forfem ~morzod-ballet ~rovnys-ricfer`
+To revoke access to `/tweet`:
+```
+/out all
+/out ~mighex-forfem ~morzod-ballet ~rovnys-ricfer
+```
 
-
-Curently not suppported with free TwitterAPI tier:
+> Currently not suppported with free TwitterAPI tier:
 
 To get information about user
 `/profile username`
